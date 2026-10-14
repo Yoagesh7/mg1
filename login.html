@@ -97,28 +97,18 @@
 
       <!-- Top Brand Header -->
       <div class="relative z-10 flex items-center justify-between gap-4">
-        <a href="index.html" class="flex items-center gap-3.5 group">
-          <div class="w-11 h-11 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 p-1 flex items-center justify-center transition-transform group-hover:scale-105 shadow-lg">
-            <img src="logo.png" alt="MG &amp; Associates Logo" class="w-full h-full object-contain filter invert brightness-200"/>
-          </div>
-          <div>
-            <span class="text-lg font-black tracking-tight text-white flex items-center gap-1.5 leading-none">
-              MG <span class="text-blue-400 font-bold">&amp;</span> ASSOCIATES
-            </span>
-            <span class="text-[10px] text-slate-400 font-semibold tracking-widest uppercase block mt-1">
-              FRN: 024819S / ICAI Practice Unit
-            </span>
-          </div>
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="logo.png" alt="MG &amp; Associates Logo" class="h-10 sm:h-11 w-auto object-contain filter invert brightness-200 transition-transform group-hover:scale-105"/>
+          <span class="text-lg font-black tracking-tight text-white flex items-center gap-1.5 leading-none">
+            MG <span class="text-blue-400 font-bold">&amp;</span> ASSOCIATES
+          </span>
         </a>
       </div>
 
       <!-- Main Showcase Content: Firm Profile & Governance -->
       <div class="relative z-10 my-6 lg:my-0 max-w-xl">
         
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-mono font-bold tracking-wider uppercase mb-4">
-          <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-          Firm Profile &amp; Governance
-        </div>
+
 
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-white tracking-tight leading-tight mb-3">
           Building Stakeholder Trust Through <br/>
@@ -127,13 +117,7 @@
           </span>
         </h2>
 
-        <p class="text-slate-300 text-xs sm:text-[13px] leading-relaxed mb-3">
-          At MG &amp; Associates, auditing is more than a statutory box-ticking exercise. It is a critical governance instrument that protects shareholder equity, provides clear visibility to management boards, and assures regulatory bodies of absolute financial veracity.
-        </p>
 
-        <p class="text-slate-400 text-xs leading-relaxed mb-6">
-          Our audit philosophy is anchored in the Standards on Auditing (SAs) issued by ICAI, aligning seamlessly with the requirements of CARO 2020, the Companies Act 2013, NFRA, and Indian Accounting Standards (Ind AS / IFRS).
-        </p>
 
         <!-- 3 Core Audit Pillars (01, 02, 03) -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
@@ -204,16 +188,7 @@
           </p>
         </div>
 
-        <!-- Simple, Clean & Italic Authentication Header Pill -->
-        <div class="mb-6 pb-4 border-b border-slate-100 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="text-sm text-slate-700 font-normal">Encrypted Statutory Vault Authentication</span>
-          </div>
-          <button type="button" onclick="loadDemoCredentials()" class="text-xs text-blue-600 hover:text-blue-800 underline transition-colors cursor-pointer">
-            Auto-fill credentials
-          </button>
-        </div>
+
 
         <!-- Login Form -->
         <form id="auditLoginForm" onsubmit="handlePortalLogin(event)" class="space-y-4">
@@ -222,9 +197,8 @@
           <div>
             <div class="flex items-center justify-between mb-1.5">
               <label id="identifierLabel" for="userIdentifier" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Corporate Email, Phone or Client ID
+                Email or Client ID
               </label>
-              <span class="text-[11px] text-slate-400 font-medium" id="identifierHint">e.g. cfo@apexgroup.in or MG-AUD-9912</span>
             </div>
             <div class="relative rounded-xl shadow-2xs">
               <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">

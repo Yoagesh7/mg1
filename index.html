@@ -800,7 +800,7 @@
   <!-- ======================================================= -->
   <!-- 4. TOP SERVICES - BLACK HALF CURVE CARDS ANIMATION      -->
   <!-- ======================================================= -->
-  <section class="pt-20 lg:pt-28 pb-0 w-full bg-white border-b border-slate-900 overflow-visible relative flex flex-col justify-between" id="top-services">
+  <section class="pt-20 lg:pt-28 pb-0 w-full bg-white border-b border-slate-900 overflow-visible relative flex flex-col justify-between" id="top-services" class="reveal-on-scroll">
     
     <!-- Big Section Header in max-w-[1600px] container -->
     <div class="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-6">
@@ -841,7 +841,7 @@
   <!-- ========================================== -->
   <!-- 5. ABOUT THE AUDIT PRACTICE               -->
   <!-- ========================================== -->
-  <section class="py-20 bg-white" id="about-practice">
+  <section class="py-20 bg-white" id="about-practice" class="reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -948,7 +948,7 @@
   <!-- 5-BOX BENTO GRID (DIRECTLY MATCHING USER WIREFRAME)      -->
   <!-- ======================================================== -->
   <span id="audit-services"></span>
-  <section class="py-16 sm:py-24 bg-[#FAFAFC] text-slate-900 border-b border-slate-200/90 relative overflow-hidden" id="standards">
+  <section class="py-16 sm:py-24 bg-[#FAFAFC] text-slate-900 border-b border-slate-200/90 relative overflow-hidden" id="standards" class="reveal-on-scroll">
     <div class="max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -1273,7 +1273,7 @@
   <!-- ========================================== -->
   <!-- 7. THE 5-STAGE AUDIT METHODOLOGY LIFECYCLE -->
   <!-- ========================================== -->
-  <section class="py-20 lg:py-28 bg-white border-b border-slate-100" id="methodology">
+  <section class="py-20 lg:py-28 bg-white border-b border-slate-100" id="methodology" class="reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -1469,7 +1469,7 @@
   <!-- 8. GOOGLE REVIEWS (MG AUDIT, COIMBATORE) - ONE-LINE ZOOM   -->
   <!-- ======================================================== -->
   <span id="tech-audit"></span>
-  <section class="py-20 sm:py-24 bg-[#FAFAFC] text-slate-900 border-b border-slate-200/90 relative overflow-hidden" id="reviews">
+  <section class="py-20 sm:py-24 bg-[#FAFAFC] text-slate-900 border-b border-slate-200/90 relative overflow-hidden" id="reviews" class="reveal-on-scroll">
     
     <!-- Ambient Background Glow -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] bg-gradient-to-r from-blue-50/60 via-indigo-50/40 to-slate-50/60 rounded-full blur-3xl pointer-events-none -z-10"></div>
@@ -1775,7 +1775,7 @@
   <!-- ========================================== -->
   <!-- 9. INDUSTRY SECTORS & VERTICALS            -->
   <!-- ========================================== -->
-  <section class="py-20 bg-white" id="sectors">
+  <section class="py-20 bg-white" id="sectors" class="reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -1904,7 +1904,7 @@
   <!-- ========================================== -->
   <!-- 10. INTERACTIVE AUDIT READINESS ESTIMATOR  -->
   <!-- ========================================== -->
-  <section class="py-20 bg-white border-y border-slate-200/70" id="calculator">
+  <section class="py-20 bg-white border-y border-slate-200/70" id="calculator" class="reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
@@ -2008,7 +2008,7 @@
   <!-- ========================================== -->
   <!-- 12. AUDIT PROPOSAL & CONTACT FORM SECTION  -->
   <!-- ========================================== -->
-  <section class="py-20 bg-[#F8FAFC]" id="contact">
+  <section class="py-20 bg-[#F8FAFC]" id="contact" class="reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -5813,6 +5813,25 @@
       header.classList.remove('scrolled-blur');
     }
   }, { passive: true });
+
+
+  // Smooth Scroll Reveal Observer
+  const scrollRevealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        // keep revealed once triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    scrollRevealObserver.observe(el);
+  });
 
 </script>
 
