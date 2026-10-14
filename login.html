@@ -42,7 +42,7 @@
   <!-- Apple SF Pro / Cupertino Clean Font System ("little mini") -->
   <style data-purpose="custom-styling">
     html {
-      font-size: 14px;
+      font-size: 15.5px; /* ~110% view zoom */
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Inter", "Plus Jakarta Sans", sans-serif;
       letter-spacing: -0.013em;
       -webkit-font-smoothing: antialiased;
@@ -110,71 +110,87 @@
             </span>
           </div>
         </a>
-
-        <!-- Live Security Status Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.07] border border-white/15 text-[11px] font-mono text-slate-300">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>TLS 1.3 Active</span>
-        </div>
       </div>
 
-      <!-- Main Showcase Content -->
-      <div class="relative z-10 my-10 lg:my-0 max-w-xl">
+      <!-- Main Showcase Content: Firm Profile & Governance -->
+      <div class="relative z-10 my-6 lg:my-0 max-w-xl">
         
-        <!-- Category Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-mono font-bold tracking-wider uppercase mb-4">
           <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-          Institutional Audit Gateway
+          Firm Profile &amp; Governance
         </div>
 
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-white tracking-tight leading-tight mb-4">
-          Statutory Standards. <br/>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif italic text-white tracking-tight leading-tight mb-3">
+          Building Stakeholder Trust Through <br/>
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-300">
-            Absolute Verification.
+            Uncompromising Audit Quality.
           </span>
         </h2>
 
-        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-8">
-          Bank-grade cryptographic access for corporate client audit committees, CFOs, and empanelled team auditors. Real-time access to audited trial balances, CARO 2020 matrices, and board deliverables.
+        <p class="text-slate-300 text-xs sm:text-[13px] leading-relaxed mb-3">
+          At MG &amp; Associates, auditing is more than a statutory box-ticking exercise. It is a critical governance instrument that protects shareholder equity, provides clear visibility to management boards, and assures regulatory bodies of absolute financial veracity.
         </p>
 
-        <!-- 4 Key Metric Tiles -->
-        <div class="grid grid-cols-2 gap-3.5 mb-8">
-          <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
-            <span class="text-xl sm:text-2xl font-black text-white font-mono block mb-0.5">100%</span>
-            <span class="text-xs font-bold text-slate-200 block">GL Data Ingestion</span>
-            <span class="text-[10px] text-slate-400 mt-0.5 block">Automated JET &amp; anomaly filters</span>
+        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+          Our audit philosophy is anchored in the Standards on Auditing (SAs) issued by ICAI, aligning seamlessly with the requirements of CARO 2020, the Companies Act 2013, NFRA, and Indian Accounting Standards (Ind AS / IFRS).
+        </p>
+
+        <!-- 3 Core Audit Pillars (01, 02, 03) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+          <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
+            <span class="text-xs font-mono font-black text-blue-400 block mb-1">01</span>
+            <h3 class="text-xs font-bold text-white mb-1">True &amp; Fair Independence</h3>
+            <p class="text-[11px] text-slate-300 leading-relaxed">Zero conflict of interest, ensuring objective and untainted assurance opinions.</p>
           </div>
 
-          <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
-            <span class="text-xl sm:text-2xl font-black text-emerald-400 font-mono block mb-0.5">256-Bit</span>
-            <span class="text-xs font-bold text-slate-200 block">Working Paper Vault</span>
-            <span class="text-[10px] text-slate-400 mt-0.5 block">ICAI SA-230 compliant hashing</span>
+          <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
+            <span class="text-xs font-mono font-black text-emerald-400 block mb-1">02</span>
+            <h3 class="text-xs font-bold text-white mb-1">Risk-Centric Scrutiny</h3>
+            <p class="text-[11px] text-slate-300 leading-relaxed">Deep-dive assessment of material misstatements, fraud indicators, and IFC gaps.</p>
           </div>
 
-          <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
-            <span class="text-xl sm:text-2xl font-black text-blue-400 font-mono block mb-0.5">18-Digit</span>
-            <span class="text-xs font-bold text-slate-200 block">UDIN Trace QR</span>
-            <span class="text-[10px] text-slate-400 mt-0.5 block">Live ICAI registry validation</span>
-          </div>
-
-          <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
-            <span class="text-xl sm:text-2xl font-black text-purple-400 font-mono block mb-0.5">6 FCAs</span>
-            <span class="text-xs font-bold text-slate-200 block">CAG &amp; RBI Empanelled</span>
-            <span class="text-[10px] text-slate-400 mt-0.5 block">Partner-led engagement oversight</span>
+          <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-colors">
+            <span class="text-xs font-mono font-black text-purple-400 block mb-1">03</span>
+            <h3 class="text-xs font-bold text-white mb-1">Actionable Insights</h3>
+            <p class="text-[11px] text-slate-300 leading-relaxed">Comprehensive Management Letters highlighting operational leakages and cost drains.</p>
           </div>
         </div>
 
-        <!-- Security & Ethics Assurance Card -->
-        <div class="p-4 rounded-2xl bg-gradient-to-r from-white/[0.06] to-transparent border border-white/10 flex items-start gap-3.5">
-          <div class="w-8 h-8 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <!-- Audit Practice Unit Summary Card -->
+        <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10">
+          <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
+            <div>
+              <span class="text-[10px] font-mono text-blue-300 uppercase tracking-widest font-bold block">Audit Practice Unit</span>
+              <h3 class="text-sm font-bold text-white">MG &amp; ASSOCIATES</h3>
+              <span class="text-[11px] text-slate-400">Chartered Accountants / Pan-India Assurance Practice</span>
+            </div>
+            <a href="index.html#contact" class="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] tracking-wide transition-colors whitespace-nowrap shadow-xs">
+              Download Full Practice Credentials
+            </a>
           </div>
-          <div>
-            <span class="text-xs font-bold text-white block">Regulated Statutory Confidentiality</span>
-            <span class="text-[11px] text-slate-400 leading-relaxed block mt-0.5">
-              All working paper uploads and board packs adhere strictly to ICAI SQC 1 standards and Section 143 of the Companies Act 2013.
-            </span>
+
+          <!-- 5 Governance Benchmarks Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-[11px]">
+            <div class="p-2 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-[9.5px] text-slate-400 uppercase tracking-wider block">FRN Number</span>
+              <span class="font-bold text-white font-mono">024819S</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-[9.5px] text-slate-400 uppercase tracking-wider block">Peer Review</span>
+              <span class="font-bold text-emerald-400">Category-I</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-[9.5px] text-slate-400 uppercase tracking-wider block">Empanelments</span>
+              <span class="font-bold text-white">CAG &amp; RBI</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-[9.5px] text-slate-400 uppercase tracking-wider block">Partners</span>
+              <span class="font-bold text-white">6 FCAs + CISA</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.03] border border-white/5 col-span-2 sm:col-span-1">
+              <span class="text-[9.5px] text-slate-400 uppercase tracking-wider block">Staff Strength</span>
+              <span class="font-bold text-blue-400">45+ Qualified</span>
+            </div>
           </div>
         </div>
 
@@ -298,7 +314,7 @@
               <input type="checkbox" id="rememberMe" checked class="rounded border-slate-300 text-blue-600 focus:ring-blue-500 w-4 h-4"/>
               <span class="text-xs text-slate-600 font-medium">Keep session active for 30 days</span>
             </label>
-            <span class="text-[11px] text-slate-400 font-mono">TLS 1.3 Pinning</span>
+            <span class="text-[11px] text-slate-400 font-mono">Encrypted Session</span>
           </div>
 
           <!-- Submit Button -->
