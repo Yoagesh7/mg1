@@ -194,18 +194,39 @@
 
     @media (max-width: 1023px) {
       .arc-stage-container {
-        min-height: 520px;
-        padding-top: 30px;
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 24px;
       }
       .black-curl-overlay {
-        height: 200px;
+        height: 140px;
+      }
+      .arc-cards-row {
+        padding: 0 16px;
+        gap: 18px;
+        margin-bottom: 12px;
       }
       .arc-curve-card {
-        min-height: 440px;
+        min-height: auto;
+        border-radius: 28px;
+        padding: 24px 20px;
         transform: translateY(0) rotate(0deg) !important;
       }
       .arc-curve-card:hover {
-        transform: translateY(-70px) scale(1.03) !important;
+        transform: translateY(-24px) scale(1.01) !important;
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25) !important;
+      }
+    }
+    @media (max-width: 639px) {
+      .arc-stage-container {
+        padding-top: 10px;
+      }
+      .black-curl-overlay {
+        height: 90px;
+      }
+      .arc-curve-card {
+        padding: 20px 16px;
+        border-radius: 22px;
       }
     }
 
@@ -2267,7 +2288,7 @@
           <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4" id="serviceHeroTitle">
             <span class="font-serif italic font-normal bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-900 bg-clip-text text-transparent">Sole Proprietorship</span> <span class="font-serif italic text-slate-800 font-light">Registration in India</span>
           </h1>
-          <p class="text-slate-500 font-serif italic text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-8" id="serviceHeroDesc">
+          <p class="text-slate-500 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-8" id="serviceHeroDesc">
             Register your Proprietorship firm in India quickly and legally. Get GST, Udyam, PAN support and complete sole proprietorship registration online with expert Chartered Accountant assistance.
           </p>
 
@@ -2298,48 +2319,64 @@
           <!-- Left Column (8 cols): Interactive Tabs & Content -->
           <div class="lg:col-span-8">
             
-            <!-- Segmented Tab Navigation -->
-            <div class="bg-slate-100 p-1.5 rounded-2xl flex flex-wrap items-center gap-1 mb-8 border border-slate-200/80 text-xs sm:text-sm font-bold">
-              <button onclick="switchServiceTab('overview')" id="tabBtn-overview" class="flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 bg-white text-slate-900 shadow-xs">
-                Overview
-              </button>
-              <button onclick="switchServiceTab('docs')" id="tabBtn-docs" class="flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900">
-                Documents Required
-              </button>
-              <button onclick="switchServiceTab('process')" id="tabBtn-process" class="flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900">
-                Step-by-Step Procedure
-              </button>
-              <button onclick="switchServiceTab('packages')" id="tabBtn-packages" class="flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900">
-                Packages &amp; Inclusions
-              </button>
-              <button onclick="switchServiceTab('faqs')" id="tabBtn-faqs" class="flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900">
-                FAQs
-              </button>
-            </div>
+            <!-- Sequential Sections Displayed One-by-One (No tab switching box) -->
+            <div class="space-y-12">
+              
+              <!-- Section 1: Service Overview & Legal Scope -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                  <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Overview &amp; Legal Scope</h2>
+                </div>
+                <div id="serviceTabOverview" class="space-y-4">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
 
-            <!-- Tab Content 1: Overview -->
-            <div id="serviceTabOverview" class="service-tab-pane space-y-6">
-              <!-- Dynamically populated -->
-            </div>
+              <!-- Section 2: Documents Required -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                  <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Documents Required</h2>
+                </div>
+                <div id="serviceTabDocs" class="space-y-4">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
 
-            <!-- Tab Content 2: Documents Required -->
-            <div id="serviceTabDocs" class="service-tab-pane hidden space-y-4">
-              <!-- Dynamically populated -->
-            </div>
+              <!-- Section 3: Step-by-Step Procedure -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                  <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Step-by-Step Procedure</h2>
+                </div>
+                <div id="serviceTabProcess" class="space-y-4">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
 
-            <!-- Tab Content 3: Step-by-Step Process -->
-            <div id="serviceTabProcess" class="service-tab-pane hidden space-y-4">
-              <!-- Dynamically populated -->
-            </div>
+              <!-- Section 4: Packages & Inclusions -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+                  <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Packages &amp; Inclusions</h2>
+                </div>
+                <div id="serviceTabPackages" class="space-y-4">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
 
-            <!-- Tab Content 4: Packages & Inclusions -->
-            <div id="serviceTabPackages" class="service-tab-pane hidden space-y-6">
-              <!-- Dynamically populated -->
-            </div>
+              <!-- Section 5: Frequently Asked Questions (FAQs) -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2.5 pb-3 border-b border-slate-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                  <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+                </div>
+                <div id="serviceTabFaqs" class="space-y-4">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
 
-            <!-- Tab Content 5: FAQs -->
-            <div id="serviceTabFaqs" class="service-tab-pane hidden space-y-3">
-              <!-- Dynamically populated -->
             </div>
 
           </div>
@@ -2360,7 +2397,7 @@
               <h3 class="text-lg font-serif italic text-slate-900 mb-1" id="formServiceName">
                 Start Your Registration
               </h3>
-              <p class="text-xs text-slate-500 font-serif italic mb-5 leading-relaxed">
+              <p class="text-xs text-slate-500 mb-5 leading-relaxed">
                 Connect with our senior Chartered Accountant team for prompt documentation, review, and same-day filing.
               </p>
 
@@ -5508,7 +5545,7 @@
       const hDesc = document.getElementById('serviceHeroDesc');
       if (badge) badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> <span class="font-serif italic font-medium lowercase tracking-normal">verified</span> / ${data.badge}`;
       if (hTitle) hTitle.innerHTML = `<span class="font-serif italic font-normal bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-900 bg-clip-text text-transparent">${data.title}</span> <span class="font-serif italic text-slate-800 font-light">in India</span>`;
-      if (hDesc) hDesc.innerHTML = `<span class="font-serif italic">${data.tagline}</span>`;
+      if (hDesc) hDesc.innerHTML = `<span class="font-sans text-slate-600 font-normal">${data.tagline}</span>`;
 
       // Populate Stats
       const statPrice = document.getElementById('serviceStatPrice');
@@ -5526,7 +5563,7 @@
         tabOverview.innerHTML = `
           <div class="rounded-3xl bg-slate-50 border border-slate-200/80 p-6 sm:p-8">
             <h3 class="text-lg sm:text-xl font-serif italic text-slate-900 mb-3">Service Scope &amp; Legal Framework</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-serif italic">${data.overview}</p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">${data.overview}</p>
             <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Key Strategic Advantages</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700 font-medium">
               ${data.benefits.map(b => `
@@ -5546,7 +5583,7 @@
         tabDocs.innerHTML = `
           <div class="rounded-3xl bg-slate-50 border border-slate-200/80 p-6 sm:p-8">
             <h3 class="text-lg font-serif italic text-slate-900 mb-2">Mandatory Documents Checklist</h3>
-            <p class="text-xs text-slate-500 font-serif italic mb-6">Submit clear scanned copies or smartphone photos. Our team verifies every document prior to portal submission.</p>
+            <p class="text-xs text-slate-500 font-normal mb-6">Submit clear scanned copies or smartphone photos. Our team verifies every document prior to portal submission.</p>
             <div class="space-y-3">
               ${data.docs.map(([title, desc], idx) => `
                 <div class="p-4 rounded-2xl bg-white border border-slate-200/70 flex items-start gap-3.5">
@@ -5570,7 +5607,7 @@
         tabProcess.innerHTML = `
           <div class="rounded-3xl bg-slate-50 border border-slate-200/80 p-6 sm:p-8">
             <h3 class="text-lg font-serif italic text-slate-900 mb-2">4-Stage Structured Execution Lifecycle</h3>
-            <p class="text-xs text-slate-500 font-serif italic mb-6">Standardized under ICAI audit guidelines for seamless, zero-bottleneck processing.</p>
+            <p class="text-xs text-slate-500 font-normal mb-6">Standardized under ICAI audit guidelines for seamless, zero-bottleneck processing.</p>
             <div class="space-y-3">
               ${data.process.map(([stage, details], idx) => `
                 <div class="p-4 rounded-2xl bg-white border border-slate-200/70 flex items-start gap-3.5">
@@ -5597,7 +5634,7 @@
               <div class="rounded-3xl p-6 border ${idx === 1 ? 'bg-blue-50/50 border-blue-300 shadow-md ring-2 ring-blue-500/20' : 'bg-slate-50 border-slate-200/80'} flex flex-col justify-between">
                 <div>
                   ${idx === 1 ? '<span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-100 px-2 py-0.5 rounded-full inline-block mb-2">Most Popular</span>' : ''}
-                  <h4 class="text-sm font-serif italic font-bold text-slate-900">${pkgName}</h4>
+                  <h4 class="text-sm font-bold text-slate-900">${pkgName}</h4>
                   <div class="my-3">
                     <span class="text-2xl font-extrabold text-slate-900">${price}</span>
                     <span class="text-[11px] text-slate-500 block mt-0.5">+ Applicable Govt Taxes</span>
@@ -5658,7 +5695,7 @@
       }
 
       // Switch to overview tab by default
-      switchServiceTab('overview');
+      // Rendered sequentially one by one
 
       // Show View
       const view = document.getElementById('serviceDetailView');
@@ -5689,18 +5726,12 @@
     }
 
     function switchServiceTab(tabName) {
+      // In sequential view, ensure all pane containers are displayed
       const tabs = ['overview', 'docs', 'process', 'packages', 'faqs'];
       tabs.forEach(t => {
-        const btn = document.getElementById('tabBtn-' + t);
         const pane = document.getElementById('serviceTab' + t.charAt(0).toUpperCase() + t.slice(1));
-        if (btn && pane) {
-          if (t === tabName) {
-            btn.className = "flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 bg-white text-slate-900 shadow-xs";
-            pane.classList.remove('hidden');
-          } else {
-            btn.className = "flex-1 py-2.5 px-3 rounded-xl transition-all duration-200 text-slate-600 hover:text-slate-900";
-            pane.classList.add('hidden');
-          }
+        if (pane) {
+          pane.classList.remove('hidden');
         }
       });
     }
